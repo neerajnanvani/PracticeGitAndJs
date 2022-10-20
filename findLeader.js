@@ -1,13 +1,12 @@
-const ans = [];
-const findLeaders = () => {
-    for (let i = 0; i < arr.length; i++) {
-        let flag = true;
-        for (let j = i + 1; j < arr.length; j++) {
-            if (arr[j] > arr[i]) flag = false;
-            break;
+const findLeaders = (arr) => {
+    const ans = [];
+    let max = arr[arr.length - 1];
+    ans.push(max);
+    for (let i = arr.length - 2; i >= 0; i--) {
+        if (arr[i] >= max) {
+            ans.push(arr[i]);
+            max = arr[i];
         }
-        if (flag) ans.push(arr[i])
     }
+    return ans;
 }
-const arr = [1, 3, 5, 7];
-findLeaders()
