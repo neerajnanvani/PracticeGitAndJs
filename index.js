@@ -16,7 +16,7 @@ let k = 3;
         let l = i;
  
         
-        let r = Math.min(i + k - 1, n - 1);
+        let r = Math.min(i + k - 1, n - 1);//checking if pair of 3 is remaining in array or not
         let temp;
          
          while (l < r)
