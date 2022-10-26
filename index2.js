@@ -1,23 +1,17 @@
 
-let a = [16,17,4,3,5,2];
-
-let b = 0;
-let m =[];
- for(let i = 0; i< a.length;i++){
+let a = [16, 17, 4, 3, 5, 2]; //input array
+let m = []; // initialising a empty array.
+for (let i = 0; i < a.length; i++) {
     let condition = true;
-    for(let j = i+1;j<a.length;j++){
-        if(a[j]>=a[i]){
-            condition = false;
+    for (let j = i + 1; j < a.length; j++) {
+        if (a[j] >= a[i]) { // if a[j]>=a[i] for any a[j],that means that a[i] is not a leader.
+            condition = false; //so make the condition false
             break;
-        //    b.push(a[i]);
-        //    console.log(a[j]);
 
-         }
-          
-     }
-if (condition == true) m.push(a[i]);
+        }
 
- 
+    }
+    if (condition == true) m.push(a[i]);//push those a[i] in our empty array which satisfy our condition
 
 }
 console.log(m);
