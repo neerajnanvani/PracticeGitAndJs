@@ -1,13 +1,13 @@
 const splitString = (s) => {
     let tmp = '';
     let ans = [];
-    for (let i = 0; i < s.length; i++) {
-        if (s[i] == ',') {
-            ans.push(tmp);
-            tmp = '';
+    for (let i = 0; i < s.length; i++) {    // Iterating string
+        if (s[i] == ',') {      // if encounter ','
+            ans.push(tmp);      // push string in output array
+            tmp = '';   // empty tmp string
             continue;
         }
-        tmp += s[i];
+        tmp += s[i];    // storing string till ',' in tmp
     }
     if (tmp) ans.push(tmp);
     return ans;
