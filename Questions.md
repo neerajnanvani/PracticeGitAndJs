@@ -29,3 +29,36 @@ leader is 5. The right most element
 is always a leader so it is also 
 included.
 
+## Q3: Caeser Cipher 
+### Description
+Julius Caesar protected his confidential information by encrypting it using a cipher. Caesar's cipher shifts each letter by a number of letters. If the shift takes you past the end of the alphabet, just rotate back to the front of the alphabet. In the case of a rotation by 3, w, x, y, and z would map to z, a, b and c.
+
+**Original alphabet:**		abcdefghijklmnopqrstuvwxyz
+**Alphabet rotated +3:**		defghijklmnopqrstuvwxyzabc
+
+### Example 1
+**Original Message:** hello how are you. <br/>
+**Key:** 4 <br/>
+**Encrypted Message:** lipps lsa evi csy
+
+### Example 2
+**Original Message:**	rohan. <br/>
+**Key:** 4 <br/>
+**Encrypted Message:** vsler <br/>
+
+
+> **Note**: The cipher only encrypts letters; symbols, such as -, remain unencrypted.
+
+
+## Q4: Split a string, using comma as the seprator
+### Description
+A CSV file is like an excel sheet but in reality, is simply a text file where each row of text represents a record and every row is segregated with commas (,) each field in the row is a property of the record,
+
+Write a function that takes a string as input and splits it into an array using commas. 
+
+Limitations: You can’t use the split method of string
+Bonus Part: Create an HTML table using the array
+
+### Example
+**Input string:** 	 Rohan,16,Male,Delhi		  : String <br/>
+**Output Array:**		\[ Rohan, 16, Male, Delhi \]	: Array \<String\> <br/>
