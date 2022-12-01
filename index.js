@@ -8,6 +8,8 @@ const splitString = (str) => {
             word = '';
         } else {
             word += str.charAt(i);
+            if(str.length - 1 == i)
+            result.push(word);
         }
     }
     return result;
