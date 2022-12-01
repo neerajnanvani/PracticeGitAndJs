@@ -1,13 +1,16 @@
-function caeserCipher(str) {
-    str = str.toUpperCase();
-    return str.replace(/[A-Z]/g, code);
+const splitString = (str) => {
+    const result = [];
+    let word = '';
 
-    function code(correspondance) {
-        const charCode = correspondance.charCodeAt();
-        return String.fromCharCode(
-            ((charCode + 4) <= 90) ? charCode + 4 : (charCode + 4) % 90 + 64
-        );
+    for(let i = 0; i < str.length; i++) {
+        if(str.charAt(i) === ",") {
+            result.push(word);
+            word = '';
+        } else {
+            word += str.charAt(i);
+        }
     }
+    return result;
 }
 
-console.log(caeserCipher("hello how are you"));
+console.log(splitString('Rohan,16,Male,Delhi'));
