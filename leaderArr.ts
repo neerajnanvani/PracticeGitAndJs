@@ -8,7 +8,7 @@ let array:number [] =[16,17,4,3,5]
                 for(let j=i+1;j<=arr.length;j++){
                     if(arr[i]<arr[j]){
                        result+=arr[j] + ' '
-                       console.log(result)
+                      
                     }
                 }
             }
