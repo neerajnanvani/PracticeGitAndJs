@@ -9,7 +9,7 @@ let arr:number[]=[1,2,3,4,5,6]
             newArr =arr[+i]
              arr[i]=arr[i+2]
              arr[i+2]=newArr
-             console.log(arr)
+             
             }
          return arr
         }
