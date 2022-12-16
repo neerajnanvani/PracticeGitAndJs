@@ -19,4 +19,4 @@ let arr:number[]=[1,2,3,4,5,6]
     }
     return arr;
         }
-        reverseArr(arr,index) // return reverse sub array
+        console.log(reverseArr(arr,index))//return reverse array
