@@ -9,7 +9,7 @@ let arr:number[]=[1,2,3,4,5,6]
         let end = Math.min(i + index - 1, arr.length - 1);
         let temp;
 
-        while (start < end) {
+        while (begin< end) {
             temp = arr[begin];
             arr[begin] = arr[end];
             arr[end] = temp;
