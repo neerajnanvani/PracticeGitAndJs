@@ -3,15 +3,20 @@ let array:number [] =[16,17,4,3,5]
 
 //function of check greater than or equal to all the elements of its right side
          const checkGreaterArr = (arr:number[]) => {
-            let result=''
+            let result:number[] = [];
             for(let i=0;i<arr.length;i++){
-                for(let j=i+1;j<=arr.length;j++){
-                    if(arr[i]<arr[j]){
-                       result+=arr[j] + ' '
-                      
+                let j;
+                for(j = i + 1; j < arr.length; j++) {    
+                    if(arr[i] <= arr[j]) {
+                        break;
                     }
+                }
+        
+                if(j == arr.length){
+                   result.push(arr[i])
                 }
             }
             return result
          }
          checkGreaterArr(array) //return leader of array
+        
