@@ -19,3 +19,9 @@ function cipher(strInput: string, n: number): string {
 
   return encryptedValue;
 }
+
+
+// testing the output in the console.
+console.log( cipher('hello how are you.', 4) ) // lipps lsa evi csy.
+
+console.log(cipher('rohan', 4));  // vsler
