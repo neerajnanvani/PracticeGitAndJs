@@ -18,3 +18,5 @@ NUMBER_ARRAY.forEach((ele) => {
    if (!isLeader(ele, TEMP_ARRAY)) leaderList.push(ele)
 });
 console.log(leaderList)
+
+// comment by manish
