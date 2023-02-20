@@ -13,10 +13,10 @@
       // Logic for encryption
       if (num >= 97 && num <= 122) {
         num += rotateBy;
-        if (num <= 122) encryptedInformation.push(String.fromCharCode(num)); // convert number to char and pushing it.
-        else encryptedInformation.push(String.fromCharCode(num - 26));
-      } 
-      else encryptedInformation.push(String.fromCharCode(num));
+        num <= 122
+          ? encryptedInformation.push(String.fromCharCode(num)) // convert number to char and pushing it.
+          : encryptedInformation.push(String.fromCharCode(num - 26));
+      } else encryptedInformation.push(String.fromCharCode(num));
     });
 
     // printing encrypted information
