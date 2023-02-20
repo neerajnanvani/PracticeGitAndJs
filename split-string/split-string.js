@@ -4,35 +4,30 @@ function splitByComma(str) {
     var word = '';
     for (var i = 0; i < strLength; i++) {
         var ch = str.charAt(i);
+        //if we get ',' it means we have to split
+        //so we get a word and push that word into arr
         if (ch == ',') {
             arr.push(word);
+            // now we have to generate a new word
             word = '';
             continue;
         }
+        // creating word by adding character one by one
         word = word + ch;
     }
+    // last word is not added 
+    // so handle this seprately 
     arr.push(word);
     return arr;
 }
+// geting all word inside array
 var record = splitByComma("Rohan,16,Male,Delhi");
-// <table>
-//         <tr>
-//             <th>Name</th>
-//             <th>Age</th>
-//             <th>Gender</th>
-//             <th>Location</th>
-//         </tr>
-//         <tr>
-//             <td>Rohan</td>
-//             <td>16</td>
-//             <td>Male</td>
-//             <td>Delhi</td>
-//         </tr>
-//     </table>
+// extracting table element from index.html
 var tableElement = document.querySelector("table");
-console.log(tableElement);
 var trElement = document.createElement('tr');
+// creating all table data
 record.forEach(function (cell) {
     trElement.innerHTML += "<td>".concat(cell, "</td>");
 });
+// appending table row into table
 tableElement === null || tableElement === void 0 ? void 0 : tableElement.appendChild(trElement);
