@@ -23,3 +23,25 @@ result.push(arr.pop())
 }
 return result
 }
+function reverseSubArr(arr,n,k){
+    let increment = k
+    let result = []
+    let startIndexForSubArr = 0
+    for(let i=0;i<n/increment;i++){
+    let subArr;
+    
+    if(k>=n){
+     subArr = arr.slice(startIndexForSubArr)
+     
+     result.push(...reverseArr(subArr))
+    }else {
+    subArr = arr.slice(startIndexForSubArr,k)
+    result.push(...reverseArr(subArr))
+    }
+    
+    startIndexForSubArr = k
+    k += increment
+    
+    }
+    return result
+    }
